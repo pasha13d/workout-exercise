@@ -18,6 +18,7 @@ dependencies:
   flutter_bloc:
   hydrated_bloc:
   equatable:
+  numberpicker:
 
 dev_dependencies:
   flutter_test:
