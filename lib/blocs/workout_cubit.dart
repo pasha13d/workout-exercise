@@ -6,7 +6,12 @@ class WorkoutCubit extends Cubit<WorkoutStates>{
   WorkoutCubit():super(const WorkoutInitial());
 
   editWorkout(Workout workout, int index){
-    return emit(WorkoutEditing(workout, index));
+    return emit(WorkoutEditing(workout, index, null));
+  }
+
+  editExercise(int? exIndex){
+    print("... my exercise index is $exIndex");
+    return emit(WorkoutEditing(state.workout!, (state as WorkoutEditing).index, exIndex));
   }
 
   goHome(){

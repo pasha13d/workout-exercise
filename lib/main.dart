@@ -6,7 +6,7 @@ import 'package:sociallogin/screens/edit_workout_screen.dart';
 import 'package:sociallogin/screens/home_page.dart';
 import 'package:sociallogin/states/workout_states.dart';
 
-/// 2:35:00
+/// 3:02:02
 
 void main() {
   runApp(const WorkoutTime());
