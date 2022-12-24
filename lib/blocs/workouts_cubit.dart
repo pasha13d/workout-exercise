@@ -2,10 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:sociallogin/models/exercise.dart';
 import 'package:sociallogin/models/workout.dart';
 
-class WorkoutsCubit extends Cubit<List<Workout>>{
+class WorkoutsCubit extends HydratedCubit<List<Workout>>{
   WorkoutsCubit():super([]);
 
   getWorkouts() async {
