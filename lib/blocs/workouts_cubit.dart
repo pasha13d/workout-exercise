@@ -42,4 +42,32 @@ class WorkoutsCubit extends HydratedCubit<List<Workout>>{
     ///... means get everything in the list
     emit([...state]);
   }
+
+  @override
+  List<Workout> fromJson(Map<String, dynamic> json) {
+    // TODO: implement fromJson
+    List<Workout> workouts = [];
+    json['workouts'].forEach(
+      (el)=> workouts.add(Workout.fromJson(el)));
+    
+    return workouts;
+  }
+
+  @override
+  Map<String, dynamic>? toJson(List<Workout> state) {
+    // TODO: implement toJson
+    if(state is List<Workout>){
+      var json = {
+        'workouts':[]
+      };
+      
+      for(var workout in state){
+        json['workouts']!.add(workout.toJson());
+      }
+
+      return json;
+    } else {
+      return null;
+    }
+  }
 }
